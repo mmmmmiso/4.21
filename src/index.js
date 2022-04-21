@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 // component
 import AddApointment from './component/AddApointment';
 import Search from './component/Search';
+import AddInfo from './component/Addinfo';
+import appointmentList from './data.json';
 
 // source
 import './index.css'
@@ -16,7 +18,11 @@ function App(){
       <Search />
       <div id="list">
         <ul>
-          <li>반복문</li>
+          {
+            appointmentList.map(item => (
+              <AddInfo key={item.id} appointment={item}/>
+            ))
+          }
         </ul>
       </div>
     </article>

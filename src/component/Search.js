@@ -1,5 +1,6 @@
 import { BiSearch } from "react-icons/bi";
 import { BiCaretDown } from "react-icons/bi";
+
 function DropDown(){
   return (
     <ul>
@@ -14,7 +15,7 @@ function Search (){
     <div id="search">
       <p>
         <BiSearch />
-        <input type="text" flaceholder="search"/>
+        <input type="text" defaultValue="search"/>
         <button type="button">정렬하기<BiCaretDown /></button>
       </p>
       <DropDown />

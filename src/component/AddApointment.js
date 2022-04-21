@@ -26,7 +26,9 @@ function AddApointment(){
             <textarea id="userDes" cols="30" rows="10" placeholder="기타설명"/>
           </li>
         </ul>
-        <p><button type="submit">제출</button></p>
+        <p>
+          <button type="submit">제출</button>
+            </p>
       </div>
   )
 }
