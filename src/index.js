@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 // component
-import AddApointment from './component/AddApointment.js';
+import AddApointment from './component/AddApointment';
+import Search from './component/Search';
 
 // source
 import './index.css'
@@ -12,6 +13,7 @@ function App(){
     <article>
       <h3><BiArchive style={{color:'#d47776'}}/> 예약시스템</h3>
       <AddApointment />
+      <Search />
       <div id="list">
         <ul>
           <li>반복문</li>

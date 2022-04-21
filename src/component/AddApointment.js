@@ -1,6 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-
 import { BiArchive } from "react-icons/bi";
 
 function AddApointment(){
@@ -35,10 +32,3 @@ function AddApointment(){
 }
 
 export default AddApointment;
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <AddApointment />
-  </React.StrictMode>
-);
