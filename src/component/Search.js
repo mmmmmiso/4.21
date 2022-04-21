@@ -15,7 +15,7 @@ function Search (){
     <div id="search">
       <p>
         <BiSearch />
-        <input type="text" defaultValue="search"/>
+        <input type="text" placeholder="search"/>
         <button type="button">정렬하기<BiCaretDown /></button>
       </p>
       <DropDown />

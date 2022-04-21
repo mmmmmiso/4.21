@@ -4,11 +4,11 @@ import ReactDOM from 'react-dom/client';
 import AddApointment from './component/AddApointment';
 import Search from './component/Search';
 import AddInfo from './component/Addinfo';
-import appointmentList from './data.json';
 
 // source
 import './index.css'
 import { BiArchive } from "react-icons/bi";
+import appointData from './data.json';
 
 function App(){
   return (
@@ -19,7 +19,7 @@ function App(){
       <div id="list">
         <ul>
           {
-            appointmentList.map(item => (
+            appointData.map(item => (
               <AddInfo key={item.id} appointment={item}/>
             ))
           }
