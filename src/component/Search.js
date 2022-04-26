@@ -13,13 +13,20 @@ function DropDown({toggleSort}){
     </ul>
   )
 }
-function Search (){
+function Search ({query,onQueryChange}){
   let [toggleSort,setToggleSort] = useState(false);
   return (
     <div id="search">
       <p>
         <BiSearch />
-        <input type="text" placeholder="search"/>
+        <input
+          type="text"
+          placeholder="search"
+          value = {query}
+          onChange = {
+            (event) => {onQueryChange(event.target.value)}
+          }
+        />
         <button type="button" onClick={
           () => {setToggleSort(!toggleSort)}
         }>정렬하기<BiCaretDown /></button>

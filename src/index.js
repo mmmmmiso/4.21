@@ -14,6 +14,16 @@ function App(){
 
   // state 설정
   let [appointmentList,setAppointmentList] = useState([])
+  // search
+  let [query,setQuery] = useState('')
+  const filterAppointment = appointmentList.filter(
+    item => {
+      return(
+        item.petName.toLowerCase().includes(query.toLowerCase()) ||
+        item.ownerName.toLowerCase().includes(query.toLowerCase())
+      )
+    }
+  )
   // callback
   const fetchData = useCallback(() => {
     fetch('./data.json')
@@ -27,11 +37,13 @@ function App(){
     <article>
       <h3><BiArchive style={{color:'#d47776'}}/> 예약시스템</h3>
       <AddApointment />
-      <Search />
+      <Search
+      query = {query}
+      onQueryChange = {myQuery => setQuery(myQuery)} />
       <div id="list">
         <ul>
           {
-            appointmentList.map(appointment => (
+            filterAppointment.map(appointment => (
               <AddInfo
                 key={appointment.id}
                 appointment={appointment}
