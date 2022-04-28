@@ -49,12 +49,13 @@ function AddWrite({toggleForm,formData,setFormData,formDataPublish}){
         </li>
       </ul>
       <p>
-        <button type="submit">예약하기</button>
+        <button type="submit"
+        onClick={formDataPublish}>예약하기</button>
       </p>
     </>
   )
 }
-function AddApointment(){
+function AddApointment({onSendAppointment,lastId}){
   const clearData = {
     petName : '',
     ownerName : '',
@@ -67,7 +68,7 @@ function AddApointment(){
 
   function formDataPublish(){
     const formDataInfo = {
-      // id : lastId + 1,
+      id : lastId + 1,
       petName : formData.petName,
       ownerName : formData.ownerName,
       aptNotes : formData.aptNotes,
